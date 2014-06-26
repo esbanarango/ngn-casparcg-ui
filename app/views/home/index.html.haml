@@ -1,1 +1,4 @@
-Oe
+= simple_form_for(MessageSender.new, url:messages_url, remote: true) do |f|
+  = f.input :body, placeholder: 'message...', label: 'Message'
+  %br
+  = f.submit class: 'btn btn-success btn-block', disable_with: 'Procesando...'
