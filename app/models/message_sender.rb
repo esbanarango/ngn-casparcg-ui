@@ -8,13 +8,13 @@ class MessageSender
 
   def initialize(attributes={})
     super
-    @socket ||= TCPSocket.new('localhost', '5555')
+    @socket ||= TCPSocket.new('localhost', '5250')
   end
 
 
   def send_message
     begin
-    	socket.puts "Epa la arepa"
+    	socket.puts body
     ensure
       socket.close
     end
